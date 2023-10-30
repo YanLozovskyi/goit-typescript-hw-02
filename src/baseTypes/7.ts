@@ -13,18 +13,8 @@ enum DayOfWeek {
   Sunday,
 }
 
-const dayNames = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
-
 const isWeekend = (day: DayOfWeek) => {
-  const dayName = dayNames[day];
+  const dayName = DayOfWeek[day];
 
   return day <= 4
     ? console.log(`${dayName} is a working day`)
@@ -34,3 +24,4 @@ const isWeekend = (day: DayOfWeek) => {
 isWeekend(DayOfWeek.Friday);
 isWeekend(DayOfWeek.Saturday);
 isWeekend(DayOfWeek.Monday);
+isWeekend(DayOfWeek.Sunday);
